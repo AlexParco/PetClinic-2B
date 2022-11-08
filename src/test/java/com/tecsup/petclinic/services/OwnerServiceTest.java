@@ -119,4 +119,27 @@ public class OwnerServiceTest {
 		logger.info("" + owner);
 		assertThat(owner.getFirstname(), is(firstname));
 	}
+
+	@Test
+	public void testDeletePet() {
+		String FIRSTNAME = "Bird";
+		String LASTNAME = "Churchill";
+		String ADDRESS = "";
+		String CITY = "";
+        String TELEPHONE = "";
+
+		Owner owner = new Owner(FIRSTNAME, LASTNAME, ADDRESS, CITY ,TELEPHONE);
+		owner = ownerService.create(owner);
+		logger.info("" + owner);
+
+
+		ownerService.delete(owner.getId());
+		
+		try {
+			ownerService.findById(owner.getId());
+			fail("Owner id = " + owner.getId() + " has not delete");
+		} catch (OwnerNotFoundException e) {
+		}
+
+	}
 }
