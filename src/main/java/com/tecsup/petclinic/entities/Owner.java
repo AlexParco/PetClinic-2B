@@ -22,7 +22,34 @@ public class Owner {
 
     private String city;
 
-    private String telephono;
+    private String telephone;
+
+
+    
+    public Owner(String firstname, String lastname, String address, String city, String telephone) {
+        super();
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.address = address;
+        this.city = city;
+        this.telephone = telephone;
+    }
+
+
+
+    public Owner() {
+    }
+
+
+
+    public Owner(long id, String firstname, String lastname, String address, String city, String telephone) {
+        this.id = id;
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.address = address;
+        this.city = city;
+        this.telephone = telephone;
+    }
 
     public long getId() {
         return id;
@@ -64,11 +91,13 @@ public class Owner {
         this.city = city;
     }
 
-    public String getTelephono() {
-        return telephono;
+    public String getTelephone() {
+        return telephone;
     }
 
-    public void setTelephono(String telephono) {
-        this.telephono = telephono;
+    public void setTelephone(String telephone) {
+        this.telephone = telephone;
     }
+
+    
 }
