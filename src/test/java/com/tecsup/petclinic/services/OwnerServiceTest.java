@@ -39,4 +39,17 @@ public class OwnerServiceTest {
 		assertThat(owner.getFirstname(), is(firstname));
 
 	}
+
+	@Test
+	public void testFindOwnerByFirstname() {
+
+		String firstname = "George";
+
+		Owner owner = null;
+
+		owner = ownerService.findByFirstname(firstname).get(0);
+
+		logger.info("" + owner);
+		assertThat(owner.getFirstname(), is(firstname));
+	}
 }
