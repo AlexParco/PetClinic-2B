@@ -3,8 +3,6 @@ package com.tecsup.petclinic.services;
 import java.util.List;
 import java.util.Optional;
 
-import javax.transaction.SystemException;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -36,11 +34,8 @@ public class OwnerServiceImpl implements OwnerService {
     @Override
     public Owner findById(long id) throws OwnerNotFoundException {
         Optional<Owner> owner = ownerRepository.findById(id);
-        System.out.println("hola como estas");
-        System.out.println(owner.get().getFirstname());
         if (!owner.isPresent())
             throw new OwnerNotFoundException("Record not found...!");
-
         return owner.get();
     }
 
