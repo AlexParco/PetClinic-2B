@@ -9,6 +9,12 @@ public interface OwnerService {
 
     /**
      * 
+     * @return
+     */
+    Iterable<Owner> findAll();
+
+    /**
+     * 
      * @param owner
      * @return
      */
