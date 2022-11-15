@@ -2,6 +2,7 @@ package com.tecsup.petclinic.controllers;
 
 import static org.hamcrest.CoreMatchers.is;
 
+
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
@@ -9,9 +10,6 @@ import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
-
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
@@ -28,10 +26,13 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.jayway.jsonpath.JsonPath;
 import com.tecsup.petclinic.dto.OwnerDTO;
 
-
+/**
+ * 
+ */
 @AutoConfigureMockMvc
 @SpringBootTest
 public class OwnerControllerTest {
+
     private static final Logger logger 
 			= LoggerFactory.getLogger(OwnerControllerTest.class);
 
@@ -40,9 +41,6 @@ public class OwnerControllerTest {
     @Autowired
 	private MockMvc mockMvc;
 
-    /**
-     * @throws Exception
-     */
     @Test
 	public void testFindAllOwners() throws Exception {
         int ID_FIRST = 1;

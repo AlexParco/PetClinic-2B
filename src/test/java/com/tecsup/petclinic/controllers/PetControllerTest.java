@@ -92,8 +92,7 @@ public class PetControllerTest {
 				.andExpect(jsonPath("$.name", is(NAME_PET)))
 				.andExpect(jsonPath("$.typeId", is(TYPE_ID)))
 				.andExpect(jsonPath("$.ownerId", is(OWNER_ID)));
-				//.andExpect(jsonPath("$.birth_date", is(DATE_REF)));
-
+				//.andExpect(jsonPath("$.birthDate", is(DATE_REF)));
 	}
 
 	/**

@@ -22,12 +22,24 @@ public class OwnerController {
 
     @Autowired
     private OwnerService ownerService;
-
+    
+    /**
+     * 
+     * @return
+     */
+    // @JsonIgnore
     @GetMapping("/owners")
     public Iterable<Owner> getOwners() {
         return ownerService.findAll();
     }
 
+    /**
+     * Create Pet
+     * 
+     * @param newPet
+     * @return
+     */
+    // @JsonIgnore
     @PostMapping("/owners")
     @ResponseStatus(HttpStatus.CREATED)
     Owner create(@RequestBody OwnerDTO newOwner) {
@@ -47,7 +59,7 @@ public class OwnerController {
 	 * @return
 	 * @throws OwnerNotFoundException
 	 */
-    @GetMapping("/pets/{id}")
+    @GetMapping("/owners/{id}")
     ResponseEntity<Owner> findOne(@PathVariable Long id) {
         try {
             return new ResponseEntity<>(ownerService.findById(id), HttpStatus.OK);
