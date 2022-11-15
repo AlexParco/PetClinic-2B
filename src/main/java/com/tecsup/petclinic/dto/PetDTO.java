@@ -16,14 +16,14 @@ public class PetDTO {
 
     // @DateTimeFormat(pattern = "yyyy-MM-dd")
     @JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
-    private Date birthDate;
+    private Date birth_date;
 
-    public PetDTO(String name, int typeId, int ownerId, Date birthDate) {
+    public PetDTO(String name, int typeId, int ownerId, Date birth_date) {
         super();
         this.name = name;
         this.typeId = typeId;
         this.ownerId = ownerId;
-        this.birthDate = birthDate;
+        this.birth_date = birth_date;
     }
 
     public long getId() {
@@ -59,17 +59,17 @@ public class PetDTO {
     }
 
     public Date getBirthDate() {
-        return birthDate;
+        return birth_date;
     }
 
-    public void setBirthDate(Date birthDate) {
-        this.birthDate = birthDate;
+    public void setBirthDate(Date birth_date) {
+        this.birth_date = birth_date;
     }
 
     @Override
     public String toString() {
         return "Pet [id=" + id + ", name=" + name + ", typeId=" + typeId + ", ownerId=" + ownerId + ", birth_date="
-                + birthDate + "]";
+                + birth_date + "]";
     }
 
 }

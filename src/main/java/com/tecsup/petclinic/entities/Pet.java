@@ -24,6 +24,7 @@ public class Pet {
 	private int typeId;
 	@Column(name = "owner_id")
 	private int ownerId;
+	@Column(name = "birth_date")
 	private Date birth_date;
 
 	public Pet() {
