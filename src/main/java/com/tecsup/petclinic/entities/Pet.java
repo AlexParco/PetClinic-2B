@@ -1,6 +1,6 @@
 package com.tecsup.petclinic.entities;
 
-import java.sql.Date;
+import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -25,7 +25,7 @@ public class Pet {
 	@Column(name = "owner_id")
 	private int ownerId;
 	private Date birth_date;
-	
+
 	public Pet() {
 	}
 
@@ -82,6 +82,7 @@ public class Pet {
 				+ birth_date + "]";
 	}
 
-
-
+	public void setBirthDate(Date birthDate) {
+		this.birth_date = birthDate;
+	}
 }
