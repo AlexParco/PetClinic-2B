@@ -44,4 +44,9 @@ public class OwnerServiceImpl implements OwnerService {
         return ownerRepository.findByFirstname(firstname);
     }
 
+    @Override
+    public Iterable<Owner> findAll() {
+        return ownerRepository.findAll();
+    }
+
 }
